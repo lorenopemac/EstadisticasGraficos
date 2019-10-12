@@ -1,0 +1,43 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class="list-group">
+        <a routerLink="/usuarios" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-user-o"></i>&nbsp;
+            <span>Usuarios</span>
+        </a>
+        <a [routerLink]="['/obras']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+             <i class="fa fa-fw fa-money"></i>&nbsp;
+             <span>Obras</span>
+        </a>
+        <a [routerLink]="['/finanzas']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-money"></i>&nbsp;
+            <span>Finanzas</span>
+        </a>
+        <div _ngcontent-c3="" class="nested-menu">
+            <a _ngcontent-c3="" class="list-group-item">
+                <span _ngcontent-c3=""><i _ngcontent-c3="" class="fa fa-plus"></i>&nbsp; Menú</span>
+            </a>
+            <li _ngcontent-c3="" class="nested expand">
+                <ul _ngcontent-c3="" class="submenu"><li _ngcontent-c3="">
+                    <a _ngcontent-c3="" href="javascript:void(0)">
+                        <span _ngcontent-c3="">Submenú</span>
+                    </a>
+                </li>
+                <li _ngcontent-c3="">
+                    <a _ngcontent-c3="" href="javascript:void(0)">
+                        <span _ngcontent-c3="">Submenú</span>
+                    </a>
+                </li>
+                <li _ngcontent-c3="">
+                    <a _ngcontent-c3="" href="javascript:void(0)">
+                        <span _ngcontent-c3="">Submenú</span>
+                    </a>
+                </li>
+                </ul>
+            </li>
+        </div>
+    </div>
+    <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+        <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
+        <span>Minimizar</span>
+    </div>
+</nav>
