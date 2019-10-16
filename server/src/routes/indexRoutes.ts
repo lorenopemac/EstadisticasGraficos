@@ -10,7 +10,7 @@ class IndexRoutes {
     }
 
     config(): void{ 
-        this.router.get('/', indexController.index); // metodo index
+        this.router.get('/', indexController.getAll); // metodo index
         this.router.post('/',indexController.create); // metodo create
         this.router.delete('/',indexController.delete);
         this.router.put('/:id',indexController.update);

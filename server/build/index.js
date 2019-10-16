@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
+const obraRoutes_1 = __importDefault(require("./routes/obraRoutes"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 class Server {
@@ -22,6 +23,7 @@ class Server {
     }
     routes() {
         this.app.use('/', indexRoutes_1.default);
+        this.app.use('/obra', obraRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

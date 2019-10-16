@@ -1,5 +1,6 @@
 import express, { Application } from "express";
 import indexRoutes from './routes/indexRoutes';
+import obraRoutes from './routes/obraRoutes';
 import morgan from 'morgan';
 import cors from 'cors';
 
@@ -23,6 +24,7 @@ class Server{
 
     routes(): void{
         this.app.use('/',indexRoutes);
+        this.app.use('/obra',obraRoutes);
     }
 
     start(): void{

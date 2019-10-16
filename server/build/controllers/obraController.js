@@ -13,9 +13,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
-class IndexController {
+class ObraController {
     /**METODO GET*/
-    index(req, res) {
+    Obra(req, res) {
         //db.query('describe obra');
         res.json({ text: 'Lista de Obras' });
     }
@@ -26,11 +26,10 @@ class IndexController {
     }
     getAll(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log("Listar Todo");
             const userQuery = function () {
                 return new Promise(function (resolve, reject) {
                     //CONSULTA
-                    database_1.default.query("SELECT denominacion,cantViviendas  FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
+                    database_1.default.query("SELECT denominacion FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
                         if (err)
                             return reject(err); //VERIFICAR ERROR
                         //RETORNAR RESULTADOS
@@ -44,14 +43,12 @@ class IndexController {
             });
         });
     }
-    /**METODO DE BUSQUEDA DE UNA SOLA OBRA */
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log("Solo uno");
             const userQuery = function () {
                 return new Promise(function (resolve, reject) {
                     //CONSULTA
-                    database_1.default.query("SELECT denominacion FROM obra WHERE baja=0 AND ", function (err, results, fields) {
+                    database_1.default.query("SELECT denominacion FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
                         if (err)
                             return reject(err); //VERIFICAR ERROR
                         //RETORNAR RESULTADOS
@@ -74,4 +71,4 @@ class IndexController {
         res.json({ text: 'Update ' + req.params.id });
     }
 }
-exports.indexController = new IndexController();
+exports.obraController = new ObraController();

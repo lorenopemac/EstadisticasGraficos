@@ -1,10 +1,10 @@
 import {Request, Response} from 'express';
 import db from '../database';
 
-class IndexController{
+class ObraController{
 
     /**METODO GET*/
-    public index(req: Request,res:Response){
+    public Obra(req: Request,res:Response){
       //db.query('describe obra');
        
       res.json({text: 'Lista de Obras'});
@@ -15,11 +15,10 @@ class IndexController{
         res.json({ text: 'Creando'});
    }
    public async getAll(req:Request , res:Response){
-    console.log("Listar Todo");
     const userQuery = function() {
         return new Promise(function (resolve, reject) {
           //CONSULTA
-          db.query("SELECT denominacion,cantViviendas  FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
+          db.query("SELECT denominacion FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
             if (err) return reject(err);//VERIFICAR ERROR
             //RETORNAR RESULTADOS
             return resolve(results);
@@ -32,14 +31,11 @@ class IndexController{
         res.json(results);
       });
    }
-
-   /**METODO DE BUSQUEDA DE UNA SOLA OBRA */
    public async getOne(req:Request , res:Response){
-    console.log("Solo uno");
     const userQuery = function() {
         return new Promise(function (resolve, reject) {
           //CONSULTA
-          db.query("SELECT denominacion FROM obra WHERE baja=0 AND ", function (err, results, fields) {
+          db.query("SELECT denominacion FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
             if (err) return reject(err);//VERIFICAR ERROR
             //RETORNAR RESULTADOS
             return resolve(results);
@@ -65,4 +61,4 @@ class IndexController{
 }
 
 
-export const indexController = new IndexController();
+export const obraController = new ObraController();
