@@ -16,7 +16,7 @@ class IndexController{
    }
    public async getAll(req:Request , res:Response){
     console.log("Listar Todo");
-    const userQuery = function() {
+    /*const userQuery = function() {
         return new Promise(function (resolve, reject) {
           //CONSULTA
           db.query("SELECT denominacion,cantViviendas  FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
@@ -30,7 +30,7 @@ class IndexController{
       userQuery().then(function(results) {
         //console.log('I got results back:', results);
         res.json(results);
-      });
+      });*/
    }
 
    /**METODO DE BUSQUEDA DE UNA SOLA OBRA */

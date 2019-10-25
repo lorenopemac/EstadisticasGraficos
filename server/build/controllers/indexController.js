@@ -27,21 +27,21 @@ class IndexController {
     getAll(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log("Listar Todo");
-            const userQuery = function () {
+            /*const userQuery = function() {
                 return new Promise(function (resolve, reject) {
-                    //CONSULTA
-                    database_1.default.query("SELECT denominacion,cantViviendas  FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
-                        if (err)
-                            return reject(err); //VERIFICAR ERROR
-                        //RETORNAR RESULTADOS
-                        return resolve(results);
-                    });
+                  //CONSULTA
+                  db.query("SELECT denominacion,cantViviendas  FROM obra WHERE baja=0 AND idEstado = 8 AND idOrganismo = 1", function (err, results, fields) {
+                    if (err) return reject(err);//VERIFICAR ERROR
+                    //RETORNAR RESULTADOS
+                    return resolve(results);
+                  });
                 });
-            };
-            userQuery().then(function (results) {
+              };
+              
+              userQuery().then(function(results) {
                 //console.log('I got results back:', results);
                 res.json(results);
-            });
+              });*/
         });
     }
     /**METODO DE BUSQUEDA DE UNA SOLA OBRA */
