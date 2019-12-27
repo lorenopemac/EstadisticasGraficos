@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import { HttpClient } from '@angular/common/http';
-import {HttpClientModule} from '@angular/common/http';
-import { interval, Subscription } from 'rxjs';
+
+
 
 
 declare var require: any;
@@ -14,88 +13,84 @@ Boost(Highcharts);
 noData(Highcharts);
 More(Highcharts);
 
-
 @Component({
   selector: 'grafico-torta',
   templateUrl: './grafico-torta.component.html',
   styleUrls: ['./grafico-torta.component.css']
 })
 
+
   export class GraficoTortaComponent implements OnInit {
     public options: any = {
       chart: {
-        type: 'scatter',
-        height: 700
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
       },
       title: {
-        text: 'Sample Scatter Plot'
+        text: 'Cantidad Viviendas'
       },
       credits: {
         enabled: false
       },
       tooltip: {
-        formatter: function() {
-          return 'x: ' + Highcharts.dateFormat('%e %b %y %H:%M:%S', this.x) +
-            ' y: ' + this.y.toFixed(2);
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      accessibility: {
+        point: {
+            valueSuffix: '%'
         }
       },
-      xAxis: {
-        type: 'datetime',
-        labels: {
-          formatter: function() {
-            return Highcharts.dateFormat('%e %b %y', this.value);
-          }
+      plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
         }
       },
-      series: [
-        {
-          name: 'Normal',
-          turboThreshold: 500000,
-          data: [[new Date('2018-01-25 18:38:31').getTime(), 2]]
-        },
-        {
-          name: 'Abnormal',
-          turboThreshold: 500000,
-          data: [[new Date('2018-02-05 18:38:31').getTime(), 7]]
-        }
-      ]
+      series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Chrome',
+            y: 61.41,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Internet Explorer',
+            y: 11.84
+        }, {
+            name: 'Firefox',
+            y: 10.85
+        }, {
+            name: 'Edge',
+            y: 4.67
+        }, {
+            name: 'Safari',
+            y: 4.18
+        }, {
+            name: 'Sogou Explorer',
+            y: 1.64
+        }, {
+            name: 'Opera',
+            y: 1.6
+        }, {
+            name: 'QQ',
+            y: 1.2
+        }, {
+            name: 'Other',
+            y: 2.61
+        }]
+      }]
     }
     
-  subscription: Subscription;
-  constructor(private http: HttpClient) { }
 
   ngOnInit(){
-    // Set 10 seconds interval to update data again and again
-    const source = interval(10000);
-
-    // Sample API
-    const apiLink = 'https://api.myjson.com/bins/13lnf4';
-
-    this.subscription = source.subscribe(val => this.getApiResponse(apiLink).then(
-      (data:any[])  => {
-        const updated_normal_data = [];
-        const updated_abnormal_data = [];
-        data.forEach(row => {
-          const temp_row = [
-            new Date(row.timestamp).getTime(),
-            row.value
-          ];
-          row.Normal === 1 ? updated_normal_data.push(temp_row) : updated_abnormal_data.push(temp_row);
-        });
-        this.options.series[0]['data'] = updated_normal_data;
-        this.options.series[1]['data'] = updated_abnormal_data;
-        Highcharts.chart('container', this.options);
-      },
-      error => {
-        console.log('Something went wrong.');
-      })
-    );
+    Highcharts.chart('container', this.options);
   }
 
-  getApiResponse(url) {
-    return this.http.get(url, {})
-      .toPromise().then(res => {
-        return res;
-      });
-  }
 }

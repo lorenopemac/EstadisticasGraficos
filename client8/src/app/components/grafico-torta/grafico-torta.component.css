@@ -5,7 +5,7 @@
     position: relative;
   }
   .contenedor:after {
-    padding-top: 56.25%;
+    padding-top: 20.25%;
     /* 16:9 ratio */
     display: block;
     content: '';
