@@ -1,14 +1,9 @@
 .contenedor {
     width: 50%;
     /* whatever width you want */
+    padding: 1 1 1 10.25%;
     display: inline-block;
     position: relative;
-  }
-  .contenedor:after {
-    padding-top: 20.25%;
-    /* 16:9 ratio */
-    display: block;
-    content: '';
   }
   .main {
     position: absolute;
