@@ -20,73 +20,61 @@ More(Highcharts);
 })
 
 
-  export class GraficoTortaComponent implements OnInit {
-    public options: any = {
-      chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie'
-      },
-      title: {
-        text: 'Cantidad Viviendas'
-      },
-      credits: {
-        enabled: false
-      },
-      tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-      },
-      accessibility: {
-        point: {
-            valueSuffix: '%'
-        }
-      },
-      plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-            }
-        }
-      },
-      series: [{
-        name: 'Brands',
-        colorByPoint: true,
-        data: [{
-            name: 'Chrome',
-            y: 61.41,
-            sliced: true,
-            selected: true
-        }, {
-            name: 'Internet Explorer',
-            y: 11.84
-        }, {
-            name: 'Firefox',
-            y: 10.85
-        }, {
-            name: 'Edge',
-            y: 4.67
-        }, {
-            name: 'Safari',
-            y: 4.18
-        }, {
-            name: 'Sogou Explorer',
-            y: 1.64
-        }, {
-            name: 'Opera',
-            y: 1.6
-        }, {
-            name: 'QQ',
-            y: 1.2
-        }, {
-            name: 'Other',
-            y: 2.61
-        }]
+export class GraficoTortaComponent implements OnInit {
+  public options: any = {
+    chart: {
+      plotBackgroundColor: null,
+      plotBorderWidth: null,
+      plotShadow: false,
+      type: 'pie'
+    },
+    title: {
+      text: ''
+    },
+    credits: {
+      enabled: false
+    },
+    tooltip: {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+      point: {
+          valueSuffix: '%'
+      }
+    },
+    plotOptions: {
+      pie: {
+        allowPointSelect: true,
+        cursor: 'pointer',
+        size: 120,
+        skipKeyboardNavigation:true,
+        borderWidth: 4,
+          dataLabels: {
+              enabled: true,
+              format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+          }
+      }
+    },
+    series: [{
+      name: 'Brands',
+      colorByPoint: true,
+      data: [{
+          name: 'Entregada',
+          y: 61.41,
+          sliced: true,
+          selected: true
+      }, {
+          name: 'Ejecución',
+          y: 11.84
+      }, {
+          name: 'Incializada',
+          y: 10.85
+      }, {
+          name: 'Finalizada',
+          y: 4.67
       }]
-    }
+    }]
+  }
     
 
   ngOnInit(){
