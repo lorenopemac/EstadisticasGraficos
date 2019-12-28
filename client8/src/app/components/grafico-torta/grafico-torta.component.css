@@ -1,13 +1,21 @@
 
-  .example-card {
-    max-width: 400px;
-    background-color:   #979a9a    ;
-    width: 50%;
-    float: left;
-  }
   
   .example-header-image {
     background-image: url('https://cdn1.iconfinder.com/data/icons/round-ui/169/64-512.png');
     background-size: cover;
   }
   
+
+  .flex-me {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: grey;
+  }
+  
+  mat-card {
+    max-width: 800px;
+    min-width: 280px;
+    background-color:   #979a9a    ;
+    width: 50%;
+    float: left;
+  }

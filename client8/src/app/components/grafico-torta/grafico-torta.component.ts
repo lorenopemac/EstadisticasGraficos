@@ -132,8 +132,12 @@ export class GraficoTortaComponent implements OnInit {
   } 
 
   ngOnInit(){
+
     Highcharts.chart('container', this.options);
     Highcharts.chart('container2', this.options2);
+    
   }
+  
+  
 
 }
