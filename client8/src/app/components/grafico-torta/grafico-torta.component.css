@@ -1,18 +1,13 @@
-.contenedor {
+
+  .example-card {
+    max-width: 400px;
+    background-color:   #979a9a    ;
     width: 50%;
-    /* whatever width you want */
-    padding: 1 1 1 10.25%;
-    display: inline-block;
-    position: relative;
+    float: left;
   }
-  .main {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    /* fill parent */
-    background-color: deepskyblue;
-    /* let's see it! */
-    color: white;
+  
+  .example-header-image {
+    background-image: url('https://cdn1.iconfinder.com/data/icons/round-ui/169/64-512.png');
+    background-size: cover;
   }
+  
