@@ -1,0 +1,10 @@
+.example-card {
+    max-width: 400px;
+    background-color: #76d7c4  ;
+  }
+  
+  .example-header-image {
+    background-image: url('https://cdn1.iconfinder.com/data/icons/round-ui/169/64-512.png');
+    background-size: cover;
+  }
+  
