@@ -1,9 +1,4 @@
-.example-card {
-  max-width: 1024;
-  background-color:   #979a9a    ;
-  width: 50%;
-  float: left;
-}
+
   .example-header-image {
     background-image: url('https://cdn1.iconfinder.com/data/icons/round-ui/169/64-512.png');
     background-size: cover;
@@ -17,9 +12,9 @@
   }
   
   mat-card {
-    max-width: 800px;
+    max-width: 2080px;
     min-width: 320px;
     background-color:   #979a9a    ;
-    width: 50%;
+    width: 100%;
     float: left;
   }

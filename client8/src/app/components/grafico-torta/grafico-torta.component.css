@@ -13,9 +13,13 @@
   }
   
   mat-card {
-    max-width: 800px;
+    max-width: 400px;
     min-width: 280px;
-    background-color:   #979a9a    ;
+    background-color:   #f2f3f3    ;
     width: 50%;
     float: left;
+  }
+
+  mat-card-title{
+    color: black;
   }
