@@ -9,13 +9,14 @@ import { GraficoBarraComponent } from './components/grafico-barra/grafico-barra.
 import { GraficoDispersionComponent } from './components/grafico-dispersion/grafico-dispersion.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import {MatCardModule, MatButtonModule} from '@angular/material';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list'
-
+import { DashboardComponent} from './pages/dashboard/dashboard.component'
+import { HomeComponent} from './pages/home/home.component'
 
 @NgModule({
   declarations: [
@@ -24,6 +25,8 @@ import { MatListModule } from '@angular/material/list'
     GraficoTortaComponent,
     GraficoBarraComponent,
     GraficoDispersionComponent,
+    DashboardComponent,
+    HomeComponent,
     NavBarComponent
   ],
   imports: [

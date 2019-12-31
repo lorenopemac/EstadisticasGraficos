@@ -1,11 +1,10 @@
 
-  
   .example-header-image {
     background-image: url('https://cdn1.iconfinder.com/data/icons/round-ui/169/64-512.png');
     background-size: cover;
   }
-  
 
+  
   .flex-me {
     display: inline-flex;
     flex-flow: row wrap;
@@ -13,11 +12,11 @@
   }
   
   mat-card {
-    max-width: 400px;
-    min-width: 280px;
-    background-color:   #f2f3f3    ;
-    width: 50%;
-    float: right;
+    max-width: 2080px;
+    min-width: 320px;
+    background-color:   white    ;
+    width: 100%;
+    float: left;
   }
 
   mat-card-title{
