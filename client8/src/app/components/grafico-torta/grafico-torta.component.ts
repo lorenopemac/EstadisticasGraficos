@@ -36,6 +36,7 @@ export class GraficoTortaComponent implements OnInit {
         plotBackgroundColor: null,
         plotBorderWidth: null,
         plotShadow: false,
+        backgroundColor: "#E0E0E0",
         type: 'pie'
       },
       title: {
@@ -89,6 +90,7 @@ export class GraficoTortaComponent implements OnInit {
       chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
+        backgroundColor: "#E0E0E0",
         plotShadow: false,
         type: 'pie'
       },
@@ -144,6 +146,7 @@ export class GraficoTortaComponent implements OnInit {
         plotBackgroundColor: null,
         plotBorderWidth: null,
         plotShadow: false,
+        backgroundColor: "#E0E0E0",
         type: 'pie'
       },
       title: {
@@ -202,6 +205,7 @@ export class GraficoTortaComponent implements OnInit {
         plotBackgroundColor: null,
         plotBorderWidth: null,
         plotShadow: false,
+        backgroundColor: "#E0E0E0",
         type: 'pie'
       },
       title: {

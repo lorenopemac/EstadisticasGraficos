@@ -1,8 +1,6 @@
 <!--<navigation></navigation>  
 -->
-<nav-bar>
-
-  <!--<mat-card class="example-card flex-flow: row wrap;" >
+<!--<mat-card class="example-card flex-flow: row wrap;" >
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>Graficos</mat-card-title>
@@ -14,26 +12,16 @@
   </mat-card>
 -->
 
-    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
-      <mat-card  fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Graficos</mat-card-title>
-        </mat-card-header>
-        
-        <mat-card-content>
-          <grafico-torta></grafico-torta>
-        </mat-card-content>
-      </mat-card>
-    </div>
- 
- 
+    
  
     <!--<grafico-barra></grafico-barra>-->
- 
-  
-</nav-bar>
+<nav-bar>
 
+  
+    <router-outlet></router-outlet>
+
+    
+</nav-bar>
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -46,4 +34,3 @@
 
 
 
-<router-outlet></router-outlet>
