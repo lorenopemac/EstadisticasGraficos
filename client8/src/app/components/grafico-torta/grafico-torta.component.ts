@@ -24,13 +24,17 @@ export class GraficoTortaComponent implements OnInit {
   
 
   ngOnInit(){
-    this.graficoViviendas();
+    let dataVivienda =[{"name":"Iniciada","y":60},{"name":"Ejecución","y":10},{"name":"Finalizada","y":16},{"name":"Entregada","y":14}];
+    let dataProyecto =[{"name":"Iniciada","y":30},{"name":"Ejecución","y":40},{"name":"Finalizada","y":16},{"name":"Entregada","y":14}];
+    //let dataProyecto =[{"name":"Iniciada","y":30},{"name":"Ejecución","y":40},{"name":"Finalizada","y":16},{"name":"Entregada","y":14}];
+    //let dataProyecto =[{"name":"Iniciada","y":30},{"name":"Ejecución","y":40},{"name":"Finalizada","y":16},{"name":"Entregada","y":14}];
+    this.graficoViviendas(dataVivienda);
     this.graficoInfraestructura();
     this.graficoMejoramiento();
-    this.graficoProyecto();
+    this.graficoProyecto(dataProyecto);
   }
 
-  graficoProyecto() {
+  graficoProyecto(dataVivienda) {
     let options: any = {
       chart: {
         plotBackgroundColor: null,
@@ -61,29 +65,23 @@ export class GraficoTortaComponent implements OnInit {
           skipKeyboardNavigation:true,
           borderWidth: 4,
             dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-            }
+              enabled: true,
+              format: '{point.y}',
+              distance: 5,
+              style: {
+                  fontSize:'12px',
+              }
+            },
+            showInLegend: true
         }
       },
       series: [{
         name: 'Brands',
         colorByPoint: true,
-        data: [{
-            name: 'aa',
-            y: 61.41,
-            sliced: false,
-            selected: true
-        }, {
-            name: 'dd',
-            y: 11.84
-        }, {
-            name: 'ee',
-            y: 10.85
-        }]
+        data: dataVivienda
       }]
     }
-    Highcharts.chart('container4', options);
+    Highcharts.chart('containerProyecto', options);
   }
   graficoMejoramiento() {
     let options: any = {
@@ -116,14 +114,22 @@ export class GraficoTortaComponent implements OnInit {
           skipKeyboardNavigation:true,
           borderWidth: 4,
             dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-            }
+              enabled: true,
+              format: '{point.y}',
+              distance: 5,
+              style: {
+                  fontSize:'12px',
+              }
+            },
+            showInLegend: true
         }
       },
       series: [{
-        name: 'Brands',
         colorByPoint: true,
+        clip: false,
+        animation: {
+          duration: 1300
+      },
         data: [{
             name: 'aa',
             y: 61.41,
@@ -138,7 +144,7 @@ export class GraficoTortaComponent implements OnInit {
         }]
       }]
     }
-    Highcharts.chart('container3', options);
+    Highcharts.chart('containerMejoramiento', options);
   }
   graficoInfraestructura() {
     let options: any = {
@@ -171,9 +177,14 @@ export class GraficoTortaComponent implements OnInit {
           skipKeyboardNavigation:true,
           borderWidth: 4,
             dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-            }
+              enabled: true,
+              format: '{point.y}',
+              distance: 5,
+              style: {
+                  fontSize:'12px',
+              }
+            },
+            showInLegend: true
         }
       },
       series: [{
@@ -193,12 +204,12 @@ export class GraficoTortaComponent implements OnInit {
         }]
       }]
     }
-    Highcharts.chart('container', options);
+    Highcharts.chart('containerInfraestructura', options);
   }
   
-  graficoViviendas(){
-    let data1 =[{"name":"asd","y":60},{"name":"asd2","y":10},{"name":"asd3","y":16},{"name":"asd4","y":14}];
-    console.log(data1);
+  graficoViviendas(dataVivienda){
+    
+    console.log(dataVivienda);
 
     let options2: any = {
       chart: {
@@ -215,7 +226,7 @@ export class GraficoTortaComponent implements OnInit {
         enabled: false
       },
       tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}</b>'
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
       },
       accessibility: {
         point: {
@@ -230,18 +241,23 @@ export class GraficoTortaComponent implements OnInit {
           skipKeyboardNavigation:true,
           borderWidth: 4,
             dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-            }
+              enabled: true,
+              format: '{point.y}',
+              distance: 5,
+              style: {
+                  fontSize:'12px',
+              }
+            },
+            showInLegend: true
         }
       },
       series: [{
         name: 'Brands',
         colorByPoint: true,
-        data: data1
+        data: dataVivienda
       }]
     } 
-    Highcharts.chart('container2', options2);
+    Highcharts.chart('containerVivienda', options2);
   }
 
 }

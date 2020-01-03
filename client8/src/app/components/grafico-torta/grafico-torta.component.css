@@ -13,11 +13,11 @@
   }
   
   mat-card {
-    max-width: 400px;
+    max-width: 360px;
     min-width: 280px;
     background-color:   #f2f3f3    ;
     width: 50%;
-    float: right;
+    float: left;
   }
 
   mat-card-title{

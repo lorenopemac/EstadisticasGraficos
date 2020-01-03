@@ -1,10 +1,15 @@
 
   .example-header-image {
-    background-image: url('https://cdn1.iconfinder.com/data/icons/round-ui/169/64-512.png');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYt2qgglF0Gm7QR3MKPt5PlrrgyGfoE_v0WhMl1RLctL8ZSP2T&s');
     background-size: cover;
   }
 
   
+  .example-header-image2 {
+    background-image: url('https://image.flaticon.com/icons/png/512/1310/1310798.png');
+    background-size: cover;
+  }
+
   .flex-me {
     display: inline-flex;
     flex-flow: row wrap;
