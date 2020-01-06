@@ -9,6 +9,7 @@ import { GraficoDispersionComponent } from './components/grafico-dispersion/graf
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import {MatCardModule, MatButtonModule} from '@angular/material';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
+import { ObraEstadoComponent } from './pages/obrasEstado/obraEstado.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -20,7 +21,9 @@ import { ActividadObrasComponent } from './components/actividad-obras/actividad-
 import { TablaActividadesComponent } from './components/tabla-actividades/tabla-actividades.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort'
+import { MatSortModule } from '@angular/material/sort';
+import { TablaNuevasObrasComponent } from './components/tabla-nuevas-obras/tabla-nuevas-obras.component';
+import { TablaObraEstadoComponent } from './components/tabla-obra-estado/tabla-obra-estado.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { MatSortModule } from '@angular/material/sort'
     HomeComponent,
     NavBarComponent,
     ActividadObrasComponent,
-    TablaActividadesComponent
+    TablaActividadesComponent,
+    TablaNuevasObrasComponent,
+    TablaObraEstadoComponent,
+    ObraEstadoComponent
   ],
   imports: [
     BrowserModule,

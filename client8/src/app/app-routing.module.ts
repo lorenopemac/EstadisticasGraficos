@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule  } from '@angular/common/http';
-import { DashboardComponent} from './pages/dashboard/dashboard.component'
+import { DashboardComponent} from './pages/dashboard/dashboard.component';
 //import { AppComponent } from './app.component'
-import { HomeComponent} from './pages/home/home.component'
+import { HomeComponent} from './pages/home/home.component';
+import { ObraEstadoComponent } from './pages/obrasEstado/obraEstado.component'
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '**', redirectTo: 'not-found' },*/
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
   { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'obraEstado', component: ObraEstadoComponent, pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent}
 ];
 

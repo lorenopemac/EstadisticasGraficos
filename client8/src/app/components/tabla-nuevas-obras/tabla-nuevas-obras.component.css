@@ -1,12 +1,10 @@
 .full-width-table {
   width: 100%;
-  min-width: 310;
-  word-wrap: break-word !important;
   background-color: white;
   border-color: black;
   text-decoration-color: black;
   align-items: center;
-  border: 0.5px solid black;
+  border: 1.5px solid black;
 
 }
 .mat-cell {
@@ -16,11 +14,3 @@
   background-color: #E8E8E8;
   color: #086788;
 }
-.mat-column-name{
-  border-right: 2px solid black;
-  align-self: stretch;
-  text-align: center
-
-
-  }
-  

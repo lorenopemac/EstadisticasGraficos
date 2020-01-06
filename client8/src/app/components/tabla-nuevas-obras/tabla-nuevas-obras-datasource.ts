@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
-export interface TablaActividadesItem {
+export interface TablaNuevasObrasItem {
   Denominacion: string;
   id: number;
   Localidad: string;
@@ -13,7 +13,7 @@ export interface TablaActividadesItem {
 }
 
 // TODO: replace this with real data from your application ACA VA LA DATA DE LA BD
-const EXAMPLE_DATA: TablaActividadesItem[] = [
+const EXAMPLE_DATA: TablaNuevasObrasItem[] = [
   {id: 1, Denominacion: 'PINTURA EN Sector GASTRONOMICO Bº MELIPAL',Localidad:'Neuquén',Sector:'ADUS'},
   {id: 2, Denominacion: 'INFORME URBANO AMBIENTAL LOTEO CONQUISTADORES DEL DESIERTO- NEUQUEN CAPITAL',Localidad:'Añelo',Sector:'ADUS'},
   {id: 3, Denominacion: 'MEJORAMIENTO HABITACIONAL PARA OÑATE MIRNA ISABEL - CIUDAD DE NEUQUÉN CAPITAL ',Localidad:'Plottier',Sector:'ADUS'},
@@ -41,8 +41,8 @@ const EXAMPLE_DATA: TablaActividadesItem[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class TablaActividadesDataSource extends DataSource<TablaActividadesItem> {
-  data: TablaActividadesItem[] = EXAMPLE_DATA;
+export class TablaNuevasObrasDataSource extends DataSource<TablaNuevasObrasItem> {
+  data: TablaNuevasObrasItem[] = EXAMPLE_DATA;
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -55,7 +55,7 @@ export class TablaActividadesDataSource extends DataSource<TablaActividadesItem>
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<TablaActividadesItem[]> {
+  connect(): Observable<TablaNuevasObrasItem[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [
@@ -79,7 +79,7 @@ export class TablaActividadesDataSource extends DataSource<TablaActividadesItem>
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: TablaActividadesItem[]) {
+  private getPagedData(data: TablaNuevasObrasItem[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
   }
@@ -88,7 +88,7 @@ export class TablaActividadesDataSource extends DataSource<TablaActividadesItem>
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: TablaActividadesItem[]) {
+  private getSortedData(data: TablaNuevasObrasItem[]) {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }
