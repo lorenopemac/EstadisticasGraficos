@@ -2,24 +2,24 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { TablaActividadesDataSource, TablaActividadesItem } from './tabla-actividades-datasource';
+import { TablaObraEstadoDataSource, TablaObraEstadoItem } from './tabla-obra-estado-datasource';
 
 @Component({
-  selector: 'tabla-actividades',
-  templateUrl: './tabla-actividades.component.html',
-  styleUrls: ['./tabla-actividades.component.css']
+  selector: 'tabla-obra-estado',
+  templateUrl: './tabla-obra-estado.component.html',
+  styleUrls: ['./tabla-obra-estado.component.css']
 })
-export class TablaActividadesComponent implements AfterViewInit, OnInit {
+export class TablaObraEstadoComponent implements AfterViewInit, OnInit {
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
-  @ViewChild(MatTable, {static: false}) table: MatTable<TablaActividadesItem>;
-  dataSource: TablaActividadesDataSource;
+  @ViewChild(MatTable, {static: false}) table: MatTable<TablaObraEstadoItem>;
+  dataSource: TablaObraEstadoDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'Denominacion','Localidad','Sector'];
+  displayedColumns = ['id', 'name'];
 
   ngOnInit() {
-    this.dataSource = new TablaActividadesDataSource();
+    this.dataSource = new TablaObraEstadoDataSource();
   }
 
   ngAfterViewInit() {

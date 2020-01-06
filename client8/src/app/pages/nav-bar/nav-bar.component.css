@@ -8,12 +8,12 @@
 
 .sidenav .mat-toolbar {
   background: inherit;
-  background: #008ad6;
+  background: #086788;
 }
 
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: #009ee3;
+  background: #07a0c3;
 }
