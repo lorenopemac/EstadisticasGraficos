@@ -1,0 +1,28 @@
+.flex-me {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: grey;
+  }
+  
+
+  
+  .flex-me {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: grey;
+  }
+  
+  mat-card {
+    min-width: 350px;
+    background-color:   #f2f3f3    ;
+    width: 50%;
+    float: left;
+  }
+
+   card-header{
+    color: black;
+  }
+  
+  mat-card-subtitle ,mat-card-title{
+    color: black;
+  }

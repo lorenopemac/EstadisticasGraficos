@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
 import { GraficoTortaComponent } from './components/grafico-torta/grafico-torta.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GraficoBarraComponent } from './components/grafico-barra/grafico-barra.component';
@@ -16,18 +15,24 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list'
 import { DashboardComponent} from './pages/dashboard/dashboard.component'
-import { HomeComponent} from './pages/home/home.component'
+import { HomeComponent} from './pages/home/home.component';
+import { ActividadObrasComponent } from './components/actividad-obras/actividad-obras.component';
+import { TablaActividadesComponent } from './components/tabla-actividades/tabla-actividades.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort'
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
     GraficoTortaComponent,
     GraficoBarraComponent,
     GraficoDispersionComponent,
     DashboardComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    ActividadObrasComponent,
+    TablaActividadesComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,10 @@ import { HomeComponent} from './pages/home/home.component'
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
