@@ -6,32 +6,33 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface TablaActividadesItem {
-  name: string;
+  Denominacion: string;
   id: number;
+  Localidad: string;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TablaActividadesItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  {id: 1, Denominacion: 'Hydrogen',Localidad:'Neuquén'},
+  {id: 2, Denominacion: 'Helium',Localidad:'Añelo'},
+  {id: 3, Denominacion: 'Lithium',Localidad:'Plottier'},
+  {id: 4, Denominacion: 'Beryllium',Localidad:'Neuquén'},
+  {id: 5, Denominacion: 'Boron',Localidad:'Neuquén'},
+  {id: 6, Denominacion: 'Carbon',Localidad:'Neuquén'},
+  {id: 7, Denominacion: 'Nitrogen',Localidad:'Plottier'},
+  {id: 8, Denominacion: 'Oxygen',Localidad:'Plottier'},
+  {id: 9, Denominacion: 'Fluorine',Localidad:'Plottier'},
+  {id: 10, Denominacion: 'Neon',Localidad:'Plottier'},
+  {id: 11, Denominacion: 'Sodium',Localidad:'Añelo'},
+  {id: 12, Denominacion: 'Magnesium',Localidad:'Añelo'},
+  {id: 13, Denominacion: 'Aluminum',Localidad:'Añelo'},
+  {id: 14, Denominacion: 'Silicon',Localidad:'Añelo'},
+  {id: 15, Denominacion: 'Phosphorus',Localidad:'Añelo'},
+  {id: 16, Denominacion: 'Sulfur',Localidad:'Añelo'},
+  {id: 17, Denominacion: 'Chlorine',Localidad:'Añelo'},
+  {id: 18, Denominacion: 'Argon',Localidad:'Añelo'},
+  {id: 19, Denominacion: 'Potassium',Localidad:'Añelo'},
+  {id: 20, Denominacion: 'Calcium',Localidad:'Añelo'},
 ];
 
 /**
@@ -94,15 +95,16 @@ export class TablaActividadesDataSource extends DataSource<TablaActividadesItem>
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
+        case 'Denominacion': return compare(a.Denominacion, b.Denominacion, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'Localidad': return compare(a.Denominacion, b.Denominacion, isAsc);
         default: return 0;
       }
     });
   }
 }
 
-/** Simple sort comparator for example ID/Name columns (for client-side sorting). */
+/** Simple sort comparator for example ID/Denominacion columns (for client-side sorting). */
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }
