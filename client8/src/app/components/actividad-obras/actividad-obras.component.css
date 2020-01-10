@@ -1,15 +1,15 @@
-.flex-me {
+ 
+  .div .flex-me {
     display: inline-flex;
     flex-flow: row wrap;
     background: grey;
+  justify-content: center;
+  flex-wrap: nowrap;
   }
   
-
-  
-  .flex-me {
-    display: inline-flex;
-    flex-flow: row wrap;
-    background: grey;
+  .flex-item {
+    justify-content: flex-end;
+    flex-grow: 1;
   }
   
   mat-card {
@@ -22,6 +22,14 @@
     padding-right: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
+    align-content: space-between;
+    margin-left: 5px;
+    justify-content: center;
+  }
+  .content{
+    justify-content: center;
+    align-content: space-between;
+
   }
 
    card-header{
