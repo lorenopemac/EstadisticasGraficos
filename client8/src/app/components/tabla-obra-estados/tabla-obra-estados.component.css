@@ -1,0 +1,12 @@
+.full-width-table {
+  width: 100%;
+  background-color: white;
+  border-color: black;
+  text-decoration-color: black;
+  align-items: center;
+  border: 1.5px solid black;
+
+}
+.mat-header-cell{
+  background-color: whitesmoke;
+}

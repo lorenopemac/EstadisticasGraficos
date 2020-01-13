@@ -6,10 +6,13 @@
   }
   
 
-  .flex-me {
+  .div .flex-me {
     display: inline-flex;
     flex-flow: row wrap;
     background: grey;
+    justify-content: center;
+    align-content: space-between;
+    margin-left: auto;
   }
   
   mat-card {
@@ -17,7 +20,11 @@
     min-width: 280px;
     background-color:   #f2f3f3    ;
     width: 50%;
+    justify-content: center;
+    align-content: space-between;
     float: left;
+    margin-left: 15px;
+    flex-direction: row ;
   }
 
   mat-card-title{
