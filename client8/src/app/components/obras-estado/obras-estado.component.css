@@ -1,0 +1,50 @@
+.mat-form-field{
+    max-width: 780px;
+    min-width: 280px;
+    width: 40%;
+    float: left;
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    
+    border-bottom: none;
+    border-radius: 0;
+}
+
+.example-header-image2 {
+    background-image: url('https://i.ya-webdesign.com/images/building-icons-png.png');
+    background-size: cover;
+  }
+
+  
+  .example-header-image {
+    background-image: url('https://img.icons8.com/plasticine/2x/search.png');
+    background-size: cover;
+  }
+
+  .flex-me {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: grey;
+  }
+  
+  .mat-card2 {
+    max-width: 2080px;
+    min-width: 310px;
+    background-color:   white    ;
+    width: 100%;
+    float: center;
+  }
+
+  mat-card {
+    max-width: 2080px;
+    min-width: 310px;
+    background-color:   white    ;
+    width: 100%;
+    float: left;
+  }
+
+  mat-card-title{
+    color: black;
+  }

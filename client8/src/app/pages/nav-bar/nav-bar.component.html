@@ -3,10 +3,13 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar> 
+        <img class="jpg-icon"  src="http://neuquentur.gob.ar/lab/wp-content/uploads/2016/07/neuquen-provincia-blanco.png" 
+        style="max-width:   100%; min-width: 50%;">
+    </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item mat-list-item [routerLink]="['home']" [routerLinkActive]="['router-link-active']">Inicio</a>
-      <a mat-list-item [routerLink]="['dashboard']" [routerLinkActive]="['router-link-active']"  >Obras por Estado</a>
+      <a mat-list-item [routerLink]="['obraEstado']" [routerLinkActive]="['router-link-active']"  >Obras por Estado</a>
       <a mat-list-item [routerLink]="['dashboard']" [routerLinkActive]="['router-link-active']"  >Seguimiento de Obras</a>
       <a mat-list-item href="#">Busqueda de Obra</a>
     </mat-nav-list>
@@ -22,7 +25,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>SGO</span>
+      <!--<img class="jpg-icon"  src="http://neuquentur.gob.ar/gastronomianeuquina/assets/images/neuquen-provincia-600x400.png" 
+        style="max-width:    15%; min-width: 12%;">-->
+      <span>S.G.O.</span>
     </mat-toolbar>
     <ng-content></ng-content>
           <!-- Add Content Here -->

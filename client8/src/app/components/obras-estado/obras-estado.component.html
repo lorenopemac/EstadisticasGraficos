@@ -1,0 +1,50 @@
+
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+    <mat-card  class="mat-card2" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Filtro</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <!-- FORMULARIO DE BUSQUEDA -->
+        <form [formGroup]="stateForm">
+          <mat-form-field>
+            <input type="text" matInput placeholder="Seleccionar Estado" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+              <mat-autocomplete #autoGroup="matAutocomplete">
+                <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                  <mat-option *ngFor="let name of group.names" [value]="name">
+                    {{name}}
+                  </mat-option>
+              </mat-optgroup>
+            </mat-autocomplete>
+          </mat-form-field>
+          <mat-form-field>
+              <input type="text" matInput placeholder="Seleccionar Localidad" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+                <mat-autocomplete #autoGroup="matAutocomplete">
+                  <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                    <mat-option *ngFor="let name of group.names" [value]="name">
+                      {{name}}
+                    </mat-option>
+                </mat-optgroup>
+              </mat-autocomplete>
+            </mat-form-field>
+        </form>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+    <mat-card  fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image2"></div>
+        <mat-card-title>Obras</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <!-- TABLA CON RESULTADOS DE OBRAS-->
+          <tabla-obra-estados></tabla-obra-estados>
+      </mat-card-content>
+    </mat-card>
+  </div>

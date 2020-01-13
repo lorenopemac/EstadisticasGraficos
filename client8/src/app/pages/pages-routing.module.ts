@@ -13,7 +13,7 @@ const routes: Routes = [
             // Ruta dirrecionando a un COMPONENTE
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             //{ path: 'obras', loadChildren: './obras/obras.module#ObrasModule' },
-            
+            { path: 'obraEstado', loadChildren: './dashboard/dashboard.module#obrasEstadoModule' },
         ]
     }
 ];
