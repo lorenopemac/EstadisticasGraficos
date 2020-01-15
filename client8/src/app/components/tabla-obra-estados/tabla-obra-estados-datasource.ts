@@ -96,7 +96,7 @@ export class TablaObraEstadosDataSource extends DataSource<TablaObraEstadosItem>
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.denominacion, b.denominacion, isAsc);
+        case 'denominacion': return compare(a.denominacion, b.denominacion, isAsc);
         case 'localidad': return compare(a.localidad, b.localidad, isAsc);
         case 'organismo': return compare(a.organismo, b.organismo, isAsc);
         case 'nroexpediente': return compare(a.nroexpediente, b.nroexpediente, isAsc);

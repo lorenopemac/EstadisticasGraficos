@@ -4,46 +4,47 @@
 
     <!-- denominacion Column -->
     <ng-container matColumnDef="denominacion">
-      <mat-header-cell *matHeaderCellDef mat-sort-header  >Denominacón</mat-header-cell>
-      <mat-cell *matCellDef="let row" >
+      
+      <th mat-header-cell *matHeaderCellDef mat-sort-header  >Denominacón</th>
+      <td mat-cell *matCellDef="let row" >
         <span class="mobile-label">Denominacón:</span>
         {{row.denominacion}}
-      </mat-cell>
+      </td>
     </ng-container>
 
     <!-- localidad Column -->
     <ng-container matColumnDef="localidad">
-      <mat-header-cell *matHeaderCellDef mat-sort-header   >Localidad</mat-header-cell>
-      <mat-cell *matCellDef="let row">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header   >Localidad</th>
+      <td mat-cell *matCellDef="let row">
         <span class="mobile-label">Localidad: </span>
         {{row.localidad}}
-      </mat-cell>
+      </td>
     </ng-container>
 
     <!-- nroexpediente Column -->
     <ng-container matColumnDef="nroexpediente">
-      <mat-header-cell *matHeaderCellDef mat-sort-header  >Nro. Expediente</mat-header-cell>
-      <mat-cell *matCellDef="let row">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header  >Nro. Expediente</th>
+      <td mat-cell *matCellDef="let row">
         <span class="mobile-label">Nro. Exp:</span>
         {{row.nroexpediente}}
-      </mat-cell>
+      </td>
     </ng-container>
 
     <!-- organismo Column -->
     <ng-container matColumnDef="organismo">
-      <mat-header-cell *matHeaderCellDef mat-sort-header  >Organismo</mat-header-cell>
-      <mat-cell *matCellDef="let row">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header  >Organismo</th>
+      <td mat-cell *matCellDef="let row">
         <span class="mobile-label">Organismo:</span>
         {{row.organismo}}
-      </mat-cell>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="actions">
-      <mat-header-cell *matHeaderCellDef mat-sort-header  >Ver Obra </mat-header-cell>
-      <mat-cell *matCellDef="let row">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header  >Ver Obra </th>
+      <td mat-cell *matCellDef="let row">
           <span class="mobile-label">Ver Obra:</span>
-          <button mat-button >Ver</button>         
-        </mat-cell>
+          <button mat-fab >Ver</button>   
+        </td>
     </ng-container>
 
     
