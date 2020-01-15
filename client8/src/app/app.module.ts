@@ -53,6 +53,7 @@ import {
   MatStepperModule,
 } from '@angular/material';
 import { TablaObraEstadosComponent } from './components/tabla-obra-estados/tabla-obra-estados.component';
+import { TablesComponent } from './pages/tables/tables.component';
 
 
 @NgModule({
@@ -70,6 +71,7 @@ import { TablaObraEstadosComponent } from './components/tabla-obra-estados/tabla
     TablaObraEstadoComponent,
     ObraEstadoComponent,
     ObrasEstadoComponent,
+    TablesComponent,
     TablaObraEstadosComponent
   ],
   imports: [

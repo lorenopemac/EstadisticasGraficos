@@ -16,7 +16,7 @@ export class TablaObraEstadosComponent implements AfterViewInit, OnInit {
   dataSource: TablaObraEstadosDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['denominacion', 'localidad', 'nroexpediente', 'organismo','actions'];
 
   ngOnInit() {
     this.dataSource = new TablaObraEstadosDataSource();
