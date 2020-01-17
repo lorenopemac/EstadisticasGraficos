@@ -1,23 +1,57 @@
+
+/** CARDS */
+.mat-card{
+  padding-top: 20 px;
+}
+
+/** FIN CARDS */
+
+/* TABLA DE OBRAS */
 .full-width-table {
   width: 100%;
   background-color: white;
   border-color: black;
   text-decoration-color: black;
- 
   border: 1.5px solid black;
-  max-height: 500px;
+  display: inline table;
 }
+
 .mat-header-cell{
   background-color: whitesmoke;
+  border: 0.1px ridge  rgba(0,0,0,.12);
+  text-align: center;
+}
+
+.mat-sort-header-container{
+  height: 20px;
 }
 
 .mat-table {
   overflow: auto;
-  max-height: 500px;
 }
 
 .mobile-label {
   display: none;
+}
+
+.mat-cell { 
+  padding-top: 0px;
+  padding-right: 15px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border-bottom-width: 0.5px;
+  border: 0.1px ridge  rgba(0,0,0,.12);
+}
+
+.mat-icon-button{
+  background-color: rgb(241, 236, 227);
+  color: #096345;
+  min-width: 0;
+  width: 35px;
+  height: 30px;
+  flex-shrink: 0;
+  line-height: 10px;
+  border-radius: 30%;
 }
 
 .button{
@@ -36,16 +70,72 @@
   }
 
   .mat-cell { 
+    padding-top: 20px;
     flex-direction: column;
     align-items: start;
-    display: block;
     padding: 8px 24px;
+    border: 0.2px solid rgb(223, 219, 219);
+    text-align: left;
   }
 
-  
   .mat-header-row {
-
     display: block;
   }
   
 }
+/* FIN TABLA DE OBRAS */
+
+
+/* FILTRO DE OBRA*/
+.mat-form-field{
+    max-width: 780px;
+    min-width: 280px;
+    width: 40%;
+    float: left;
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    
+    border-bottom: none;
+    border-radius: 0;
+}
+
+.example-header-image2 {
+    background-image: url('https://i.ya-webdesign.com/images/building-icons-png.png');
+    background-size: cover;
+  }
+
+  
+  .example-header-image {
+    background-image: url('https://img.icons8.com/plasticine/2x/search.png');
+    background-size: cover;
+  }
+
+  .flex-me {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: grey;
+  }
+  
+  .mat-card2 {
+    max-width: 2080px;
+    min-width: 310px;
+    background-color:   white    ;
+    width: 100%;
+    float: center;
+  }
+
+  mat-card {
+    max-width: 2080px;
+    min-width: 310px;
+    background-color:   white    ;
+    width: 100%;
+    float: left;
+  }
+
+  mat-card-title{
+    color: black;
+  }
+
+/* FIN FILTRO DE OBRA*/

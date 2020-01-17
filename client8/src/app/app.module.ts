@@ -15,7 +15,6 @@ import { HomeComponent} from './pages/home/home.component';
 import { ActividadObrasComponent } from './components/actividad-obras/actividad-obras.component';
 import { TablaActividadesComponent } from './components/tabla-actividades/tabla-actividades.component';
 import { TablaNuevasObrasComponent } from './components/tabla-nuevas-obras/tabla-nuevas-obras.component';
-import { TablaObraEstadoComponent } from './components/tabla-obra-estado/tabla-obra-estado.component';
 import { ObrasEstadoComponent } from './components/obras-estado/obras-estado.component'
 import {MatOptionModule} from '@angular/material'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -68,7 +67,6 @@ import { TablesComponent } from './pages/tables/tables.component';
     ActividadObrasComponent,
     TablaActividadesComponent,
     TablaNuevasObrasComponent,
-    TablaObraEstadoComponent,
     ObraEstadoComponent,
     ObrasEstadoComponent,
     TablesComponent,
