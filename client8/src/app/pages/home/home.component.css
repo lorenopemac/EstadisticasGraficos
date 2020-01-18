@@ -14,7 +14,7 @@
     display: inline-flex;
     flex-flow: row wrap;
     background: grey;
-    padding-top: 15px;
+    padding-top: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
@@ -26,13 +26,12 @@
     background-color:   white    ;
     width: 100%;
     float: left;
-    
-    padding-top: 15px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
+    overflow: auto;
+
   }
 
   mat-card-title{
     color: black;
   }
+
+ 

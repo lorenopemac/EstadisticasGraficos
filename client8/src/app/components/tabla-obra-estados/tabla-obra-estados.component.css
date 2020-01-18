@@ -1,12 +1,146 @@
+
+/** CARDS */
+mat-card {
+  max-width: 2080px;
+  min-width: 310px;
+  background-color:   white    ;
+  width: 100%;
+  float: left;
+}
+
+/** FIN CARDS */
+
+/* TABLA DE OBRAS */
 .full-width-table {
   width: 100%;
   background-color: white;
   border-color: black;
   text-decoration-color: black;
-  align-items: center;
-  border: 1.5px solid black;
-
+  display: inline table;
 }
+
 .mat-header-cell{
   background-color: whitesmoke;
+  font-size: 14px;
+  color: black;
+  padding: 21px 0;
+  justify-content: flex-end;
+  text-align: right;
 }
+
+.align-right-deno{
+  
+  display: flex; 
+  justify-content: flex-end; 
+  padding-right: 50%;
+}
+
+.mat-sort-header-container{
+  height: 20px;
+}
+
+.mat-table {
+  overflow: auto;
+}
+
+.mobile-label {
+  display: none;
+}
+
+.mat-cell { 
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  border-bottom-width: 0.5px;
+}
+
+
+.mat-icon-button{
+  background-color: rgb(241, 236, 227);
+  color: #07a0c3;
+  min-width: 0;
+  width: 45px;
+  height: 35px;
+  flex-shrink: 0;
+  line-height: 10px;
+  border-radius: 30%;
+}
+
+.button{
+  background-color: #4CAF50;
+}
+
+@media (max-width: 600px) {
+  .mobile-label {
+    width: 95px;
+    display: block;
+        font-weight: bold;
+  }
+
+  .mat-header-cell  {
+    display: none;
+  }
+
+  .mat-cell { 
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0px;
+    border: 0.2px solid rgb(223, 219, 219);
+    text-align: left;
+  }
+
+  .mat-header-row {
+    display: block;
+  }
+  
+}
+/* FIN TABLA DE OBRAS */
+
+
+/* FILTRO DE OBRA*/
+.mat-form-field{
+    max-width: 780px;
+    min-width: 280px;
+    width: 40%;
+    float: left;
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    border-bottom: none;
+    border-radius: 0;
+}
+
+.header-image2 {
+    background-image: url('https://i.ya-webdesign.com/images/building-icons-png.png');
+    background-size: cover;
+  }
+
+  
+  .header-image {
+    background-image: url('https://img.icons8.com/plasticine/2x/search.png');
+    background-size: cover;
+  }
+
+  .flex-me {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: grey;
+  }
+  
+  .mat-card2 {
+    max-width: 2080px;
+    min-width: 310px;
+    background-color:   white    ;
+    width: 100%;
+  }
+
+ 
+
+  mat-card-title{
+    color: black;
+  }
+
+/* FIN FILTRO DE OBRA*/

@@ -266,7 +266,7 @@ constructor( private router: Router) {
           click: function (event) {
               console.log(event.point.id,event.point.name);//envio de IDLOCALIDAD y NOMBRE LOCALIDAD
               //window.location.href = "/dashboard ";
-              self.router.navigate(['/dashboard']);
+              self.router.navigate(['/obraEstado']);
               //console.log(this);
               //this.router.navigate(['dashboard']);
               

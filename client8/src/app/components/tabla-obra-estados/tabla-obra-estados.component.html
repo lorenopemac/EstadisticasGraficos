@@ -1,25 +1,125 @@
-<div class="mat-elevation-z8">
-  <table mat-table class="full-width-table" matSort aria-label="Elements">
-    <!-- Id Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
-      <td mat-cell *matCellDef="let row">{{row.id}}</td>
-    </ng-container>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
-      <td mat-cell *matCellDef="let row">{{row.name}}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
-
-  <mat-paginator #paginator
-      [length]="dataSource?.data.length"
-      [pageIndex]="0"
-      [pageSize]="50"
-      [pageSizeOptions]="[25, 50, 100, 250]">
-  </mat-paginator>
+<!-- CARD CON FILTROS -->
+<div class ="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+  <mat-card  class="mat-card2" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title>Filtro</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <!-- FORMULARIO DE BUSQUEDA -->
+      <form [formGroup]="stateForm">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Seleccionar Estado" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+            <mat-autocomplete #autoGroup="matAutocomplete">
+              <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                <mat-option *ngFor="let name of group.names" [value]="name">
+                  {{name}}
+                </mat-option>
+            </mat-optgroup>
+          </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="text" matInput placeholder="Seleccionar Localidad" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+              <mat-autocomplete #autoGroup="matAutocomplete">
+                <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+                  <mat-option *ngFor="let name of group.names" [value]="name">
+                    {{name}}
+                  </mat-option>
+              </mat-optgroup>
+            </mat-autocomplete>
+          </mat-form-field>
+      </form>
+      <!-- FIN FORMULARIO DE BUSQUEDA -->
+    </mat-card-content>
+  </mat-card>
 </div>
+<!-- FIN CARD CON FILTROS -->
+<br>
+<!-- CARD CON TABLA DE OBRAS -->
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+  <mat-card  fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+    <mat-card-header>
+      <div mat-card-avatar class="header-image2"></div>
+      <mat-card-title>Obras</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <!-- TABLA CON RESULTADOS DE OBRAS-->
+      <div class="mat-elevation-z8">
+        <mat-table class="full-width-table" matSort aria-label="Elements" [class.isMobile]="isMobile">
+      
+          <!-- denominacion Column -->
+          <ng-container matColumnDef="denominacion">
+            
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="align-right-deno" >Denominación</th>
+            <td mat-cell *matCellDef="let row" >
+              <span class="mobile-label">Denominación: </span>
+              {{row.denominacion}}
+              <span >
+                <button mat-icon-button >
+                  <mat-icon>search</mat-icon>
+                </button>  
+              </span>
+            </td>
+          </ng-container>
+      
+          <!-- localidad Column -->
+          <ng-container matColumnDef="localidad">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  >Localidad</th>
+            <td mat-cell  *matCellDef="let row">
+              <span  class="mobile-label">Localidad: </span>
+              {{row.localidad}}
+            </td>
+          </ng-container>
+      
+          <!-- nroexpediente Column -->
+          <ng-container matColumnDef="nroexpediente">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  >Nro. Expediente</th>
+            <td mat-cell *matCellDef="let row">
+              <span class="mobile-label">Nro. Exp:</span>
+              {{row.nroexpediente}}
+            </td>
+          </ng-container>
+      
+          <!-- organismo Column -->
+          <ng-container matColumnDef="organismo">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  >Organismo</th>
+            <td mat-cell *matCellDef="let row">
+              <span class="mobile-label">Organismo:</span>
+              {{row.organismo}}
+            </td>
+          </ng-container>
+      <!--
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  >Ver Obra </th>
+            <td mat-cell *matCellDef="let row">
+                <span class="mobile-label">Ver Obra:</span>
+                <button mat-fab >Ver</button>   
+              </td>
+          </ng-container>
+      -->
+          
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </mat-table>
+      
+        <mat-paginator #paginator
+            [length]="dataSource?.data.length"
+            [pageIndex]="0"
+            [pageSize]="10"
+            [pageSizeOptions]="[10, 50, 100, 250]">
+        </mat-paginator>
+      </div>
+
+      <!-- FIN TABLA CON RESULTADOS DE OBRAS-->
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- FIN CARD CON TABLA DE OBRAS -->
+
+
+
