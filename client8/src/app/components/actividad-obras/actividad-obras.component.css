@@ -18,14 +18,11 @@
     background-color:   #f2f3f3    ;
     width: 100%;
     float: left;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
     align-content: space-between;
     margin-left: 5px;
     justify-content: center;
   }
+  
   .content{
     justify-content: center;
     align-content: space-between;
@@ -39,3 +36,19 @@
   mat-card-subtitle ,mat-card-title{
     color: black;
   }
+
+  .divUltimas{
+    
+  padding-top: 1%;
+  padding-right: 2%;
+  padding-bottom: 0;
+  padding-left: 16px;
+  }
+
+  .divMovimiento{
+    
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-bottom: 0;
+    padding-left: 1%;
+    }

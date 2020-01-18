@@ -1,7 +1,11 @@
 
 /** CARDS */
-.mat-card{
-  padding-top: 20 px;
+mat-card {
+  max-width: 2080px;
+  min-width: 310px;
+  background-color:   white    ;
+  width: 100%;
+  float: left;
 }
 
 /** FIN CARDS */
@@ -12,14 +16,23 @@
   background-color: white;
   border-color: black;
   text-decoration-color: black;
-  border: 1.5px solid black;
   display: inline table;
 }
 
 .mat-header-cell{
   background-color: whitesmoke;
-  border: 0.1px ridge  rgba(0,0,0,.12);
-  text-align: center;
+  font-size: 14px;
+  color: black;
+  padding: 21px 0;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.align-right-deno{
+  
+  display: flex; 
+  justify-content: flex-end; 
+  padding-right: 50%;
 }
 
 .mat-sort-header-container{
@@ -36,19 +49,19 @@
 
 .mat-cell { 
   padding-top: 0px;
-  padding-right: 15px;
+  padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
   border-bottom-width: 0.5px;
-  border: 0.1px ridge  rgba(0,0,0,.12);
 }
+
 
 .mat-icon-button{
   background-color: rgb(241, 236, 227);
-  color: #096345;
+  color: #07a0c3;
   min-width: 0;
-  width: 35px;
-  height: 30px;
+  width: 45px;
+  height: 35px;
   flex-shrink: 0;
   line-height: 10px;
   border-radius: 30%;
@@ -72,8 +85,8 @@
   .mat-cell { 
     padding-top: 20px;
     flex-direction: column;
-    align-items: start;
-    padding: 8px 24px;
+    align-items: center;
+    padding: 8px 0px;
     border: 0.2px solid rgb(223, 219, 219);
     text-align: left;
   }
@@ -96,18 +109,17 @@
     padding-right: 2px;
     padding-bottom: 1px;
     padding-left: 2px;
-    
     border-bottom: none;
     border-radius: 0;
 }
 
-.example-header-image2 {
+.header-image2 {
     background-image: url('https://i.ya-webdesign.com/images/building-icons-png.png');
     background-size: cover;
   }
 
   
-  .example-header-image {
+  .header-image {
     background-image: url('https://img.icons8.com/plasticine/2x/search.png');
     background-size: cover;
   }
@@ -123,16 +135,9 @@
     min-width: 310px;
     background-color:   white    ;
     width: 100%;
-    float: center;
   }
 
-  mat-card {
-    max-width: 2080px;
-    min-width: 310px;
-    background-color:   white    ;
-    width: 100%;
-    float: left;
-  }
+ 
 
   mat-card-title{
     color: black;

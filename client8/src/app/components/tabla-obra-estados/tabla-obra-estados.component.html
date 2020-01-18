@@ -1,10 +1,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- CARD CON FILTROS -->
-<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+<div class ="container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
   <mat-card  class="mat-card2" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
+      <div mat-card-avatar class="header-image"></div>
       <mat-card-title>Filtro</mat-card-title>
     </mat-card-header>
     
@@ -37,12 +37,12 @@
   </mat-card>
 </div>
 <!-- FIN CARD CON FILTROS -->
-
+<br>
 <!-- CARD CON TABLA DE OBRAS -->
 <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
   <mat-card  fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image2"></div>
+      <div mat-card-avatar class="header-image2"></div>
       <mat-card-title>Obras</mat-card-title>
     </mat-card-header>
     
@@ -54,7 +54,7 @@
           <!-- denominacion Column -->
           <ng-container matColumnDef="denominacion">
             
-            <th mat-header-cell *matHeaderCellDef mat-sort-header  >Denominación</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header class="align-right-deno" >Denominación</th>
             <td mat-cell *matCellDef="let row" >
               <span class="mobile-label">Denominación: </span>
               {{row.denominacion}}
@@ -68,9 +68,9 @@
       
           <!-- localidad Column -->
           <ng-container matColumnDef="localidad">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header   >Localidad</th>
-            <td mat-cell *matCellDef="let row">
-              <span class="mobile-label">Localidad: </span>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header  >Localidad</th>
+            <td mat-cell  *matCellDef="let row">
+              <span  class="mobile-label">Localidad: </span>
               {{row.localidad}}
             </td>
           </ng-container>

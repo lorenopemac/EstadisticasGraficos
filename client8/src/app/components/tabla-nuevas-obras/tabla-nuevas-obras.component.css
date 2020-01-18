@@ -3,14 +3,44 @@
   background-color: white;
   border-color: black;
   text-decoration-color: black;
-  align-items: center;
-  border: 1.5px solid black;
-  overflow: auto;
+  display: inline table;
 }
-.mat-cell {
-  color: #086788;
-}
+
 .mat-header-cell{
-  background-color: #E8E8E8;
-  color: #086788;
+  background-color: whitesmoke;
+  font-size: 14px;
+  color: black;
+  justify-content: flex-end;
+  text-align: right;
 }
+.mat-column-name{
+  border-right: 2px solid black;
+  align-self: stretch;
+  text-align: center
+}
+  .mat-sort-header-container{
+    height: 20px;
+  }
+  
+  .mat-table {
+    overflow: auto;
+  }
+
+  td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type, th.mat-header-cell:first-of-type {
+    padding-left: 0;
+}
+  .mat-icon-button{
+    background-color: rgb(241, 236, 227);
+    color: #2fa5bd;
+    min-width: 0;
+    width: 28px;
+    height: 35px;
+    flex-shrink: 0;
+    line-height: 10px;
+    border-radius: 30%;
+    border: 0.2px dashed #2fa5bd;
+  }
+  
+  .button{
+    background-color: #4CAF50;
+  }
