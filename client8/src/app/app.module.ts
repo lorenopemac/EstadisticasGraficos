@@ -53,6 +53,7 @@ import {
 } from '@angular/material';
 import { TablaObraEstadosComponent } from './components/tabla-obra-estados/tabla-obra-estados.component';
 import { TablesComponent } from './pages/tables/tables.component';
+import { ObraDashboardComponent } from './pages/obraDashboard/obraDashboard.component';
 
 
 @NgModule({
@@ -70,6 +71,7 @@ import { TablesComponent } from './pages/tables/tables.component';
     ObraEstadoComponent,
     ObrasEstadoComponent,
     TablesComponent,
+    ObraDashboardComponent,
     TablaObraEstadosComponent
   ],
   imports: [
