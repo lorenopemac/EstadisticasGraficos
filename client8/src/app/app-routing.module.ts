@@ -17,9 +17,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'obraEstado', component: ObraEstadoComponent, pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent},
+  //{ path: 'dashboard', component: DashboardComponent}, ANTIGUO
   { path: 'tablas', component: TablesComponent},
-  { path: 'obraDashboard', component: ObraDashboardComponent}
+  { path: 'dashboard', component: ObraDashboardComponent}
 ];
 
 @NgModule({

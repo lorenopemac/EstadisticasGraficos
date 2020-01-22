@@ -6,12 +6,19 @@
   
   mat-card {
     
-    background-color:   #d6ebeb    ;
+    background-color:   #979a9a    ;
     width: 100%;
     float: left;
   }
 
   
+  mat-card {
+    
+    min-width: 280px;
+    background-color:   #f2f3f3    ;
+
+    float: right;
+  }
 
    card-header{
     color: black;
