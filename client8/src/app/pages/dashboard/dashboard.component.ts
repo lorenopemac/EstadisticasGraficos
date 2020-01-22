@@ -375,6 +375,8 @@ export class DashboardComponent implements OnInit {
       }]
     };
 
+
+  
     var myChart = new Chart(this.ctx, {
       type: 'line',
       data: data,
@@ -382,9 +384,9 @@ export class DashboardComponent implements OnInit {
 
     });
 
+/** GRAFICO PRINCIPAL */
 
-
-    var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    var chart_labels = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
     this.datasets = [
       [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100],
       [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120],
@@ -429,6 +431,7 @@ export class DashboardComponent implements OnInit {
     };
     this.myChartData = new Chart(this.ctx, config);
 
+/** FIN GRAFICO PRINCIPAL */
 
     this.canvas = document.getElementById("CountryChart");
     this.ctx  = this.canvas.getContext("2d");
