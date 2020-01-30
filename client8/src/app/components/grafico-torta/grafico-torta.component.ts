@@ -44,10 +44,10 @@ constructor( private router: Router) {
   graficoProyecto(dataVivienda) {
     let options: any = {
       chart: {
-        plotBackgroundColor: null,
+        plotBackgroundColor: "#ecf2fa",
+          backgroundColor: "#ecf2fa",
         plotBorderWidth: null,
         plotShadow: false,
-        backgroundColor: "#E0E0E0",
         type: 'pie'
       },
       title: {
@@ -93,9 +93,9 @@ constructor( private router: Router) {
   graficoMejoramiento() {
     let options: any = {
       chart: {
-        plotBackgroundColor: null,
+        plotBackgroundColor: "#ecf2fa",
+          backgroundColor: "#ecf2fa",
         plotBorderWidth: null,
-        backgroundColor: "#E0E0E0",
         plotShadow: false,
         type: 'pie'
       },
@@ -156,10 +156,10 @@ constructor( private router: Router) {
   graficoInfraestructura() {
     let options: any = {
       chart: {
-        plotBackgroundColor: null,
+        plotBackgroundColor: "#ecf2fa",
+          backgroundColor: "#ecf2fa",
         plotBorderWidth: null,
         plotShadow: false,
-        backgroundColor: "#E0E0E0",
         type: 'pie'
       },
       title: {
@@ -220,10 +220,10 @@ constructor( private router: Router) {
 
     let options2: any = {
       chart: {
-        plotBackgroundColor: null,
+        plotBackgroundColor: "#ecf2fa",
+        backgroundColor: "#ecf2fa",
         plotBorderWidth: null,
         plotShadow: false,
-        backgroundColor: "#E0E0E0",
         type: 'pie'
       },
       title: {

@@ -3,11 +3,10 @@
 mat-card {
   max-width: 2080px;
   min-width: 310px;
-  background-color:   white    ;
+  background-color:   #ecf2fa    ;
   width: 100%;
   float: left;
 }
-
 /** FIN CARDS */
 
 /* TABLA DE OBRAS */
