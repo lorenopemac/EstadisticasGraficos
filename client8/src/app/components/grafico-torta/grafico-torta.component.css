@@ -9,7 +9,7 @@
   .div .flex-me {
     display: inline-flex;
     flex-flow: row wrap;
-    background: grey;
+    background: #ecf2fa;
     justify-content: center;
     align-content: space-between;
     margin-left: auto;
@@ -18,7 +18,7 @@
   mat-card {
     max-width: 360px;
     min-width: 280px;
-    background-color:   #f2f3f3    ;
+    background-color:   #ecf2fa    ;
     width: 50%;
     justify-content: center;
     align-content: space-between;

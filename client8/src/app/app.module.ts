@@ -53,6 +53,9 @@ import {
 } from '@angular/material';
 import { TablaObraEstadosComponent } from './components/tabla-obra-estados/tabla-obra-estados.component';
 import { TablesComponent } from './pages/tables/tables.component';
+import { ObraDashboardComponent } from './pages/obraDashboard/obraDashboard.component';
+import { FichaObraComponent } from './components/ficha-obra/ficha-obra.component';
+import { TablaActividadObraComponent } from './components/tabla-actividad-obra/tabla-actividad-obra.component';
 
 
 @NgModule({
@@ -70,7 +73,10 @@ import { TablesComponent } from './pages/tables/tables.component';
     ObraEstadoComponent,
     ObrasEstadoComponent,
     TablesComponent,
-    TablaObraEstadosComponent
+    ObraDashboardComponent,
+    TablaObraEstadosComponent,
+    FichaObraComponent,
+    TablaActividadObraComponent
   ],
   imports: [
     BrowserModule,

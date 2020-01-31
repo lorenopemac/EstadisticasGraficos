@@ -1,0 +1,54 @@
+
+
+  <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
+    <mat-card fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+      <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+        <!--<div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{member.title}}</mat-card-title>-->
+        <mat-card-title>Información General</mat-card-title>
+        <mat-card-subtitle>Datos de la obra</mat-card-subtitle>
+    </mat-card-header>
+      
+      <mat-card-content>
+      <mat-list> 
+           <mat-list-item>
+             <p> 
+                <mat-icon>apartment</mat-icon>
+               <b> Denominación: </b> 90 viviendas e infraestructura de Neuquén Capital Sector A  
+              </p>
+
+            </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+           <mat-list-item>
+              <p>
+                  <mat-icon>label_important</mat-icon>
+                <b>Nro. Obra: </b>2018-123456
+              </p>
+            </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+           <mat-list-item>
+              <p> 
+                  <mat-icon>where_to_vote</mat-icon>
+                <b> Localidad: </b> Neuquén 
+              </p> 
+            </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+           <mat-list-item>
+              <p>
+                  <mat-icon>home</mat-icon>
+                 <b> Cantidad Viviendas: </b> 83
+              </p>
+            </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+            <mat-list-item>
+                <p>
+                    <mat-icon>house</mat-icon>
+                   <b> Cantidad Viviendas Especiales: </b> 7
+                </p>
+              </mat-list-item>
+              <mat-divider [inset]="true"></mat-divider>
+      </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>

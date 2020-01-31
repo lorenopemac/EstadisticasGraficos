@@ -1,0 +1,36 @@
+.flex-me {
+    display: inline-flex;
+    flex-flow: row wrap;
+    background: grey;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+  }
+
+  .header-image {
+    background-image: url('https://image.flaticon.com/icons/png/512/1310/1310814.png');
+    background-size: cover;
+  }
+  
+  mat-card {
+    background-color:   #ecf2fa;
+    width: 100%;
+    float: left;
+    border: 0.5px solid rgb(188, 199, 206)
+  }
+
+ 
+
+   card-header{
+    color: black;
+  }
+
+  mat-card-content {
+    background-color:   #f1f5fa;
+  }
+
+  mat-list-item{
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }

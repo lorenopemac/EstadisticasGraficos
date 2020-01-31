@@ -1,0 +1,56 @@
+.full-width-table {
+  width: 100%;
+  max-height: 505px;
+  background-color:   #ecf2fa    ;
+}
+.flex-me {
+  display: inline-flex;
+  flex-flow: row wrap;
+  background: grey;
+}
+
+mat-card {
+  
+  background-color:   #ecf2fa    ;
+  width: 50%;
+  float: left;
+  border: 0.5px solid rgb(188, 199, 206) !important;
+  max-height: 505px;
+}
+
+
+mat-paginator{
+
+  background-color:   #ecf2fa    ;
+  border: 0.1 solid ;
+
+}
+
+
+.header-image {
+background-image: url('https://image.flaticon.com/icons/svg/252/252055.svg');
+background-size: cover;
+}
+
+ card-header{
+  color: black;
+}
+
+mat-card-content{
+  max-height: 505px;
+}
+
+
+@media (max-width: 600px) {
+
+  mat-card {
+  
+  background-color:   #ecf2fa    ;
+  width: 100%;
+  float: left;
+  border: 0.5px solid rgb(188, 199, 206) !important;
+  max-height: 505px;
+}
+
+  
+}
