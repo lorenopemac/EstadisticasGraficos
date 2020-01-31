@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import { RouterLink, Router } from '@angular/router';
-
+import { GraficoTortaService } from '../../services/grafico-torta.service';
 
 declare var require: any;
 let Boost = require('highcharts/modules/boost');
@@ -26,15 +26,14 @@ export class GraficoTortaComponent implements OnInit {
 
  
 
-constructor( private router: Router) {
+constructor( private router: Router, private serviceTorta:GraficoTortaService) {
   self = this; // Assign outer context to self
 }
 
   ngOnInit(){
-    let dataVivienda =[{"name":"Iniciada","id":"8","y":60},{"name":"Ejecución","id":"9","y":10},{"name":"Finalizada","id":"11","y":16},{"name":"Entregada","id":"12","y":14}];
+    //let dataVivienda =[{"name":"Iniciada","id":"8","y":60},{"name":"Ejecución","id":"9","y":10},{"name":"Finalizada","id":"11","y":16},{"name":"Entregada","id":"12","y":14}];
     let dataProyecto =[{"name":"Iniciada","y":30},{"name":"Ejecución","y":40},{"name":"Finalizada","y":16},{"name":"Entregada","y":14}];
-    //let dataProyecto =[{"name":"Iniciada","y":30},{"name":"Ejecución","y":40},{"name":"Finalizada","y":16},{"name":"Entregada","y":14}];
-    //let dataProyecto =[{"name":"Iniciada","y":30},{"name":"Ejecución","y":40},{"name":"Finalizada","y":16},{"name":"Entregada","y":14}];
+    let dataVivienda = this.serviceTorta.getEstadoVivienda();
     this.graficoViviendas(dataVivienda);
     this.graficoInfraestructura();
     this.graficoMejoramiento();
