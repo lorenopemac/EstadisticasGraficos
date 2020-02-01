@@ -16,7 +16,7 @@ export class TablaActividadObraComponent implements AfterViewInit, OnInit {
   dataSource: TablaActividadObraDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['indice', 'accion','fecha'];
 
   ngOnInit() {
     this.dataSource = new TablaActividadObraDataSource();

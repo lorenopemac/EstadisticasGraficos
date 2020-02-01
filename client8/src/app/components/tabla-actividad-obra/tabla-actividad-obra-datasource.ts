@@ -6,36 +6,37 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface TablaActividadObraItem {
-  name: string;
-  id: number;
+  accion: string; 
+  indice: number;
+  fecha: Date;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: TablaActividadObraItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  {indice: 1, accion: 'Certificación mes Diciembre',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 2, accion: 'Certificación mes Noviembre',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 3, accion: 'Adicional',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 4, accion: 'Ampliación de plazos',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 5, accion: 'Paralización',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 6, accion: 'Carbon',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 7, accion: 'Nitrogen',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 8, accion: 'Oxygen',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 9, accion: 'Fluorine',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 10, accion: 'Neon',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 11, accion: 'Sodium',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 12, accion: 'Magnesium',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 13, accion: 'Aluminum',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 14, accion: 'Silicon',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 15, accion: 'Phosphorus',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 16, accion: 'Sulfur',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 17, accion: 'Chlorine',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 18, accion: 'Argon',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 19, accion: 'Potassium',fecha: new Date(Date.UTC(2019, 5, 11))},
+  {indice: 20, accion: 'Calcium',fecha: new Date(Date.UTC(2019, 5, 11))},
 ];
 
 /**
- * Data source for the TablaActividadObra view. This class should
+ * Data source for the TablaActivindiceadObra view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
@@ -74,7 +75,7 @@ export class TablaActividadObraDataSource extends DataSource<TablaActividadObraI
   disconnect() {}
 
   /**
-   * Paginate the data (client-side). If you're using server-side pagination,
+   * Paginate the data (client-sindicee). If you're using server-sindicee pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
   private getPagedData(data: TablaActividadObraItem[]) {
@@ -83,7 +84,7 @@ export class TablaActividadObraDataSource extends DataSource<TablaActividadObraI
   }
 
   /**
-   * Sort the data (client-side). If you're using server-side sorting,
+   * Sort the data (client-sindicee). If you're using server-sindicee sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
   private getSortedData(data: TablaActividadObraItem[]) {
@@ -94,15 +95,15 @@ export class TablaActividadObraDataSource extends DataSource<TablaActividadObraI
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'accion': return compare(a.accion, b.accion, isAsc);
+        case 'indice': return compare(+a.indice, +b.indice, isAsc);
         default: return 0;
       }
     });
   }
 }
 
-/** Simple sort comparator for example ID/Name columns (for client-side sorting). */
+/** Simple sort comparator for example indice/accion columns (for client-sindicee sorting). */
 function compare(a, b, isAsc) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }

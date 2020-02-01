@@ -13,16 +13,24 @@
         Inicio
     </a>
       <a mat-list-item [routerLink]="['obraEstado']" [routerLinkActive]="['router-link-active']"  >
-        <mat-icon matListIcon>filter_center_focus</mat-icon>
+        <mat-icon matListIcon>local_library</mat-icon>
         Obras por Estado
       </a>
       <a mat-list-item [routerLink]="['dashboard']" [routerLinkActive]="['router-link-active']"  >
         <mat-icon matListIcon>speed</mat-icon>
         Seguimiento Obras
       </a>
-      <a mat-list-item [routerLink]="['dashboard']" [routerLinkActive]="['router-link-active']"  >
+      <a mat-list-item [routerLink]="['busqueda']" [routerLinkActive]="['router-link-active']"  >
         <mat-icon matListIcon>youtube_searched_for</mat-icon>
         Busqueda de Obra
+      </a>
+      <a mat-list-item [routerLink]="['busqueda']" [routerLinkActive]="['router-link-active']"  >
+        <mat-icon matListIcon>insert_chart_outlined</mat-icon>
+        Estadisticas
+      </a>
+      <a mat-list-item [routerLink]="['busqueda']" [routerLinkActive]="['router-link-active']"  >
+        <mat-icon matListIcon>map_out</mat-icon>
+        Mapa Provincia
       </a>
       
     </mat-nav-list>
