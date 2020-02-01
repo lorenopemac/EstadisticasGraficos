@@ -7,6 +7,7 @@ import { HomeComponent} from './pages/home/home.component';
 import { ObraEstadoComponent } from './pages/obrasEstado/obraEstado.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { ObraDashboardComponent } from './pages/obraDashboard/obraDashboard.component';
+import { ObraBusquedaComponent } from './pages/obraBusqueda/obraBusqueda.component';
 
 const routes: Routes = [
   /*{ path: 'login', loadChildren: './login/login.module#LoginModule' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'obraEstado', component: ObraEstadoComponent, pathMatch: 'full' },
   //{ path: 'dashboard', component: DashboardComponent}, ANTIGUO
   { path: 'tablas', component: TablesComponent},
-  { path: 'dashboard', component: ObraDashboardComponent}
+  { path: 'dashboard', component: ObraDashboardComponent},
+  { path: 'busqueda', component: ObraBusquedaComponent}
 ];
 
 @NgModule({

@@ -56,6 +56,8 @@ import { TablesComponent } from './pages/tables/tables.component';
 import { ObraDashboardComponent } from './pages/obraDashboard/obraDashboard.component';
 import { FichaObraComponent } from './components/ficha-obra/ficha-obra.component';
 import { TablaActividadObraComponent } from './components/tabla-actividad-obra/tabla-actividad-obra.component';
+import { ObraBusquedaComponent } from './pages/obraBusqueda/obraBusqueda.component';
+
 
 
 @NgModule({
@@ -76,7 +78,8 @@ import { TablaActividadObraComponent } from './components/tabla-actividad-obra/t
     ObraDashboardComponent,
     TablaObraEstadosComponent,
     FichaObraComponent,
-    TablaActividadObraComponent
+    TablaActividadObraComponent,
+    ObraBusquedaComponent
   ],
   imports: [
     BrowserModule,
