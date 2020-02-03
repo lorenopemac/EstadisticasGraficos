@@ -57,6 +57,7 @@ import { ObraDashboardComponent } from './pages/obraDashboard/obraDashboard.comp
 import { FichaObraComponent } from './components/ficha-obra/ficha-obra.component';
 import { TablaActividadObraComponent } from './components/tabla-actividad-obra/tabla-actividad-obra.component';
 import { ObraBusquedaComponent } from './pages/obraBusqueda/obraBusqueda.component';
+import { GraficoLineaTiempoComponent } from './components/grafico-linea-tiempo/grafico-linea-tiempo.component';
 
 
 
@@ -79,7 +80,8 @@ import { ObraBusquedaComponent } from './pages/obraBusqueda/obraBusqueda.compone
     TablaObraEstadosComponent,
     FichaObraComponent,
     TablaActividadObraComponent,
-    ObraBusquedaComponent
+    ObraBusquedaComponent,
+    GraficoLineaTiempoComponent
   ],
   imports: [
     BrowserModule,
