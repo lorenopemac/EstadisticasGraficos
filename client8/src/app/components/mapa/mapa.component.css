@@ -1,0 +1,30 @@
+/* Structure */
+table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+/** CARDS */
+mat-card {
+    max-width: 2080px;
+    min-width: 310px;
+    background-color:   #ecf2fa    ;
+    width: 100%;
+    float: left;
+  }
+
+  .header-image {
+    background-image: url('https://img.icons8.com/plasticine/2x/search.png');
+    background-size: cover;
+  }
+
+  .header-image-mapa {
+    background-image: url('https://image.flaticon.com/icons/svg/2489/2489181.svg');
+    background-size: cover;
+  }
+
+  /** FIN CARDS */  

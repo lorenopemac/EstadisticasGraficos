@@ -1,0 +1,41 @@
+<!-- CARD CON FILTROS -->
+<div  fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+    <mat-card  fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>Filtro</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <!-- FORMULARIO DE BUSQUEDA -->
+        <mat-form-field>
+            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Seleccionar Localidad">
+        </mat-form-field>
+        <!-- FIN FORMULARIO DE BUSQUEDA -->
+      </mat-card-content>
+    </mat-card>
+</div>
+    
+<!-- FIN CARD CON FILTROS-->
+
+
+  <div class="divUltimas" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
+    <mat-card   fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+      <mat-card-header>
+        <!--<div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{member.title}}</mat-card-title>
+        <mat-card-subtitle>{{member.subtitle}}</mat-card-subtitle>-->
+        <div mat-card-avatar class="header-image-mapa"></div>
+        <mat-card-title>Mapa Provincial</mat-card-title>
+        <mat-card-subtitle>Localidades</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+
+        <div id='mapid' style="width:100%; height:100%;">
+          
+        </div>
+  
+      </mat-card-content>
+    </mat-card>
+  </div>

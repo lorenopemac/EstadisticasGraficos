@@ -27,7 +27,11 @@
     "highcharts": "^8.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "leaflet": "^1.5.1",
+    "leaflet-routing-machine": "^3.2.12",
+    "leaflet.markercluster": "^1.4.1",
+    "@types/leaflet-markercluster": "^1.0.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.21",

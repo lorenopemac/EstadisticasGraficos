@@ -8,6 +8,7 @@ import { ObraEstadoComponent } from './pages/obrasEstado/obraEstado.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { ObraDashboardComponent } from './pages/obraDashboard/obraDashboard.component';
 import { ObraBusquedaComponent } from './pages/obraBusqueda/obraBusqueda.component';
+import { MapaObrasComponent } from './pages/mapaObras/mapaObras.component';
 
 const routes: Routes = [
   /*{ path: 'login', loadChildren: './login/login.module#LoginModule' },
@@ -21,7 +22,8 @@ const routes: Routes = [
   //{ path: 'dashboard', component: DashboardComponent}, ANTIGUO
   { path: 'tablas', component: TablesComponent},
   { path: 'dashboard', component: ObraDashboardComponent},
-  { path: 'busqueda', component: ObraBusquedaComponent}
+  { path: 'busqueda', component: ObraBusquedaComponent},
+  { path: 'mapa', component: MapaObrasComponent}
 ];
 
 @NgModule({
