@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Map, latLng, tileLayer, Layer, marker } from 'leaflet';
+//import { Map, latLng, tileLayer, Layer, marker } from 'leaflet';
 
 /*import 'leaflet-routing-machine';
 import 'leaflet';
