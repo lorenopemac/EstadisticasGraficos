@@ -27,4 +27,8 @@ export class TablaNuevasObrasComponent implements AfterViewInit, OnInit {
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
   }
+
+  public hello(){
+    console.log("btn clickeado!");
+  }
 }
