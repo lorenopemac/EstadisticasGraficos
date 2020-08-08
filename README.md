@@ -1,4 +1,4 @@
-		Sistema de Reportes Obras Instituto Vivienda Neuquén.
+		Sistema de Reportes Obras.
 	
 
 Angular - NodeJS  - MySQL
